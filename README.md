@@ -9,5 +9,5 @@
 1. Eclipse IDE [Eclipse](https://www.eclipse.org/downloads/)
 
 ## Herramientas extra
-1. Dentro de Eclipse, click en Help > Marketplace
+1. Spring Tools. Dentro de Eclipse en las pestañas superiores, click en Help > Marketplace. Buscar en ventana "Spring Tools 4".
 1. Lombok [lombok](https://projectlombok.org/)
