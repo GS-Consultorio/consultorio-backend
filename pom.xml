@@ -12,16 +12,20 @@
 	<artifactId>backend-consultorio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>backend-consultorio</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Consultorio Medico para gestion de citas con pacientes Spring Boot</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
