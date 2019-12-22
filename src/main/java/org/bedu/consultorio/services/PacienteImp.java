@@ -7,14 +7,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PacienteImp implements PacienteService{
+public class PacienteImp implements PacienteService {
 	
 	@Autowired
 	private PacienteRepository repository;
 
 	@Override
 	public Paciente savePaciente(Paciente paciente) {
-		return repository.save(paciente);
+		if(repository.existsById(paciente.getIdCliente())) {
+			throw new RestException("Ya existe un cliente con el id");
+		}else {
+			return repository.save(paciente);
+		}
 	}
 
 	@Override
@@ -27,17 +31,21 @@ public class PacienteImp implements PacienteService{
 	}
 
 	@Override
-	public Paciente updatePaciente(Paciente e) {
-		// TODO Auto-generated method stub
-		return null;
+	public Paciente updatePaciente(Paciente paciente) {
+		if(!repository.existsById(paciente.getIdCliente())) {
+			throw new RestException("Ya existe un cliente con el id: ");
+		}else {
+			return repository.save(paciente);
+		}
 	}
 
 	@Override
 	public void deletePaciente(Long id) {
-		// TODO Auto-generated method stub
-		
+		if(!repository.existsById(id)) {
+			throw new RestException("Se requiere un Id existente para eliminar paciente");
+		}else {
+			repository.deleteById(id);
+		}		
 	}
 	
-	
-
 }
