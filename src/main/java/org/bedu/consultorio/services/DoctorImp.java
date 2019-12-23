@@ -4,7 +4,6 @@ import org.bedu.consultorio.exceptions.RestException;
 import org.bedu.consultorio.model.persona.Doctor;
 import org.bedu.consultorio.repositories.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.w3c.dom.ranges.RangeException;
 
 public class DoctorImp implements DoctorSrevice{
 	
