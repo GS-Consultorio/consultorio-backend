@@ -11,14 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-
-
-public class Especialidad extends Doctor {
-	
-	
+public class Especialidad {	
 	@Id
 	private Long idEspecialidad;
 	private String nombreEspecialidad;
-	
-
 }
