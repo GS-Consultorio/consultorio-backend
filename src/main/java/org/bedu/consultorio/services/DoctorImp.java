@@ -11,7 +11,7 @@ public class DoctorImp implements DoctorSrevice{
 	
 	@Autowired
 	private DoctorRepository repository;
-
+	
 	@Override
 	public Doctor saveDoctor(Doctor doctor) {
 		// TODO Auto-generated method stub
