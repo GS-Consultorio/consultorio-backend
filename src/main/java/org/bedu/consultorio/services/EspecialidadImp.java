@@ -4,8 +4,9 @@ import org.bedu.consultorio.exceptions.RestException;
 import org.bedu.consultorio.model.persona.Especialidad;
 import org.bedu.consultorio.repositories.EspecialidadRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class EspecialidadImp implements EspecialidadService{
 	
 	@Autowired

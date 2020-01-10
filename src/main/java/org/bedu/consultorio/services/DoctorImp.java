@@ -4,7 +4,9 @@ import org.bedu.consultorio.exceptions.RestException;
 import org.bedu.consultorio.model.persona.Doctor;
 import org.bedu.consultorio.repositories.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DoctorImp implements DoctorSrevice{
 	
 	@Autowired
