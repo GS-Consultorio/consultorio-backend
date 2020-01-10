@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
-@RequestMapping("/doctores/")
+@RequestMapping("/doctor/")
 
 public class DoctorController {
 	
