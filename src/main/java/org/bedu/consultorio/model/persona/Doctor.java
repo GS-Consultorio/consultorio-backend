@@ -19,7 +19,7 @@ public class Doctor extends Persona{
 	private Long idEmpleado;
 	private String telefono;
 	private Date fechaNac;
-	private String Cedula;
+	private String cedula;
 	private String contacto;	
 
 }
