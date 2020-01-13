@@ -24,7 +24,7 @@ public class DoctorController {
 	@Autowired
 	private DoctorSrevice doctorService;
 	
-	 @PostMapping("/saveDoctor")
+	@PostMapping("/saveDoctor")
 	public Doctor savePaciente(@RequestBody Doctor doctor) {
 		try {
 			return doctorService.saveDoctor(doctor);
