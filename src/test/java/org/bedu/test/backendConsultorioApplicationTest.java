@@ -3,18 +3,9 @@ package org.bedu.test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.bedu.consultorio.BackendConsultorioApplication;
-import org.bedu.consultorio.exceptions.RestException;
 import org.bedu.consultorio.model.persona.Doctor;
-import org.bedu.consultorio.model.persona.Especialidad;
-import org.bedu.consultorio.model.persona.Paciente;
-import org.junit.jupiter.api.DisplayName;
+import org.bedu.consultorio.services.DoctorSrevice;
 import org.junit.jupiter.api.Test;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.server.ResponseStatusException;
 
 public class backendConsultorioApplicationTest {
 
@@ -24,6 +15,38 @@ public class backendConsultorioApplicationTest {
 		});
 	}
 	
+	 @Test
+	    public void updateDoctor() {
+	        Doctor doctor = new Doctor();
+	        assertEquals("", doctor);
+	    }
+	 
+	 @Test
+		public void saveDoctor() {
+	    	Doctor doctor= new Doctor();
+	          assertEquals("Roberto", doctor);
+		}
+		
+	    @Test
+		public void getDoctor() {
+	    	  Doctor doctor = new Doctor();
+	          assertEquals("Roberto", doctor);
+		}
+		
+	    @Test
+		public void deleteDoctor() throws Exception{
+	    	//Long idEmpleado = ;
+	    	//Doctor doctor = new Doctor(idEmpleado);
+	    	//given(doctorService.findUserById(idEmpleado)).willReturn(Optional.of(doctor));
+	    	//doNothing().when(doctorService).deleteUserById(doctor.getId());
+		}
+
+		public void  getDoctorService() {
+			  Doctor doctor = new Doctor();
+		        assertEquals("Roberto", doctor);
+		}
+
+		public void setDoctorService(DoctorSrevice doctorService) {
+			this.doctorService = doctorService;
+		}
 }
-
-
