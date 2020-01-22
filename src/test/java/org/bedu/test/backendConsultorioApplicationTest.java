@@ -8,7 +8,9 @@ import org.bedu.consultorio.services.DoctorSrevice;
 import org.junit.jupiter.api.Test;
 
 public class backendConsultorioApplicationTest {
-
+	
+	private DoctorSrevice doctorService;
+	
 	@Test
 	public void test() {
 		BackendConsultorioApplication.main(new String[] {

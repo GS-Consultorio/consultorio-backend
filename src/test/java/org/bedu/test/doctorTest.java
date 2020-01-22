@@ -10,9 +10,8 @@ import org.apache.catalina.User;
 import org.bedu.consultorio.exceptions.RestException;
 import org.bedu.consultorio.model.persona.Doctor;
 import org.bedu.consultorio.services.DoctorSrevice;
-import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
