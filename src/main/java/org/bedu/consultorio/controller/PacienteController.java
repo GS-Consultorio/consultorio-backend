@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
+
 import org.bedu.consultorio.exceptions.RestException;
 
 @RestController
@@ -31,6 +33,15 @@ public class PacienteController {
 			return pacienteService.savePaciente(paciente);
 		}catch(RestException e) {
 			throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
+		}
+	}
+	
+	@GetMapping("/getAllPaciente")
+	public List<Paciente> getAllPaciente() {
+		try {
+			return pacienteService.getAllPaciente();
+		}catch(RestException e) {
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
 		}
 	}
 	

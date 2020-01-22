@@ -1,5 +1,7 @@
 package org.bedu.consultorio.services;
 
+import java.util.List;
+
 import org.bedu.consultorio.exceptions.RestException;
 import org.bedu.consultorio.model.persona.Paciente;
 import org.bedu.consultorio.repositories.PacienteRepository;
@@ -21,6 +23,11 @@ public class PacienteImp implements PacienteService {
 		}
 	}
 
+	@Override
+	public List<Paciente> getAllPaciente() throws RestException {
+		return repository.findAll();
+	}
+	
 	@Override
 	public Paciente getPaciente(Long id) throws RestException {
 		if(!repository.existsById(id)) {
