@@ -24,7 +24,7 @@ public class PacienteImp implements PacienteService {
 	@Override
 	public Paciente getPaciente(Long id) throws RestException {
 		if(!repository.existsById(id)) {
-			throw new RestException("Se requiere un Id existente para obtener el autor.");
+			throw new RestException("Se requiere un Id existente para obtener el paciente.");
 		}else {
 			return repository.findById(id).get();
 		}
